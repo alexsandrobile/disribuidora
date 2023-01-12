@@ -58,6 +58,12 @@ main {
     flex:1;
     padding:20px;
 }
+
+main img {
+    height: 80px;
+    width: 180px;
+}
+
 h1 {
     font-family:'Hepta Slab', Helvetica, Arial;
 }
