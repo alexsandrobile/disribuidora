@@ -272,7 +272,8 @@ h1 {
     margin-bottom:20px;
 }
 .cart--item {
-    display:flex;
+    /*display:flex;*/
+    display: none;
     align-items:center;
     margin:10px 0;
 }
@@ -285,7 +286,8 @@ h1 {
     flex:1;
 }
 .cart--item--qtarea {
-    display:inline-flex;
+    display: none;
+    /*display:inline-flex;*/
     background-color:#EEE;
     border-radius:10px;
     height:30px;
@@ -310,7 +312,8 @@ h1 {
     padding:15px 0;
     border-top:1px solid #79b9dd;
     color:#315970;
-    display:flex;
+    /*display:flex;*/
+    display: none;
     justify-content: space-between;
     font-size:15px;
 }
@@ -323,6 +326,8 @@ h1 {
     font-weight: bold;
 }
 .cart--finalizar {
+    /*acrescentei display*/
+    display: none;
     padding:20px 30px;
     border-radius:20px;
     background-color:#48d05f;

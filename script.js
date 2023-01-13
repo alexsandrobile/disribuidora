@@ -240,15 +240,5 @@ c('.cart--finalizar').addEventListener('click', ()=>{
 });
 
 
-function receberQtItem() {
-
-    var valorQtItem = document.getElementById("cart--item--qt").value;
-    
-    document.getElementById("recebe--item--qt").value = valorQtItem;
-
-    document.getElementById("valor--cart--item--qt").innerHTML = valorQtItem;
-    
-}
-
 
 
