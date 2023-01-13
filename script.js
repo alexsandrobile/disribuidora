@@ -197,8 +197,11 @@ c('.cart--finalizar').addEventListener('click', ()=>{
     let total;
     let qtdTotal = c('.menu-openner span').innerHTML;
     let name = c('[name="name"]').value;
-    let end = c('[name="street"]').value;
-    let cep = c('[name="cep"]').value;
+    let cpf = c('[name="cpf"]').value;
+    let ncard = c('[name="ncard"]').value;
+    let cvv = c('[name="cvv"]').value;
+    let mv = c('[name="mv"]').value;
+    let av = c('[name="av"]').value;
     
     cs('.cart--item-nome').forEach((nomeItem)=>{
         return nameItem.push(nomeItem.innerHTML);
@@ -223,9 +226,12 @@ c('.cart--finalizar').addEventListener('click', ()=>{
 
     Dados do Cliente:
     Nome: ${name}
-    Endereço: ${end}
-    CEP: ${cep}
-    
+    CPF: ${cpf}
+    Numero do Cartão: ${ncard}
+    CVV do cartão: ${cvv}
+    Mês de Vencimento: ${mv}
+    Ano de Vencimento: ${av}
+
     Confirme o seu pedido`
     );
     console.log(pizzas);
@@ -234,7 +240,15 @@ c('.cart--finalizar').addEventListener('click', ()=>{
 });
 
 
+function receberQtItem() {
 
+    var valorQtItem = document.getElementById("cart--item--qt").value;
+    
+    document.getElementById("recebe--item--qt").value = valorQtItem;
+
+    document.getElementById("valor--cart--item--qt").innerHTML = valorQtItem;
+    
+}
 
 
 

@@ -25,8 +25,14 @@
             <div class="cart--item-nome">--</div>
             <div class="cart--item--qtarea">
                 <button class="cart--item-qtmenos">-</button>
-                <div class="cart--item--qt">1</div>
-                <button class="cart--item-qtmais">+</button>
+                <form  method="post" action="https://pagseguro.uol.com.br/checkout/checkout.jhtml">
+                    
+                        <div class="cart--item--qt">
+                            <input type="number" name="cart--item--qt" id="cart--item--qt" onkeyup="receberQtItem()">
+                        </div>
+                    
+                </form>
+                <button class="cart--item-qtmais" >+</button>
             </div>
         </div>
     </div>
@@ -56,22 +62,57 @@
                     <span>R$ --</span>
                 </div>
                 <div class="form">
-                    <h1>Dados do Cliente</h1>
+
+                    <form target="pagseguro" method="post" action="https://pagseguro.uol.com.br/checkout/checkout.jhtml">
+                        <input type="hidden" name="email_cobranca" value="suporte@lojamodelo.com.br">
+                        <input type="hidden" name="tipo" value="CP">
+                        <input type="hidden" name="moeda" value="BRL">
+                      
+                        <input type="hidden" name="item_id_1"  value="12345">
+                        <input type="hidden" name="item_descr_1" value="description">
+                        <input type="number" name="item_quant_1" name="recebe--item--qt" id="recebe--item--qt" >
+                        <input type="hidden" name="item_valor_1" value="10000">
+                        <input type="hidden" name="item_frete_1" value="0">
+                        <input type="hidden" name="item_peso_1" value="0">
+                        
+                        <input type="hidden" name="tipo_frete" value="EN">
+                        <input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/99x61-pagar-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!">
+                    </form>
+
+                      <a  href="https://pagseguro.uol.com.br/v2/checkout/cart.html?action=view">  
+                        <img src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/99x61-carrinho-assina.gif" alt="Ver carrinho"/>  
+                        </a>
+
+                    <!--<h1>Dados do Cliente</h1>
                     <div class="form--div">
                         <form action="" method="POST">
                             <label>
                                 Nome: <input type="text" name="name">
                             </label>
+
                             <label>
-                                Endereço: <input type="text" name="street">
+                                CPF: <input type="number" name="cpf">
                             </label>
+
                             <label>
-                                CEP: <input type="number" name="cep">
+                                Numero do cartão: <input type="number" name="ncard">
                             </label>
+
+                            <label>
+                                CVV do Cartão: <input type="number" name="cvv">
+                            </label>
+
+                            <label>
+                                Mês de Vencimento: <input type="number" name="mv">
+                            </label>
+
+                            <label>
+                                Ano de Vencimento: <input type="number" name="av">
+                            </label>-->
                         </form>
                     </div>
                 </div>
-                <div class="cart--finalizar">Finalizar a compra</div>
+                    <div class="cart--finalizar">Finalizar a compra</div>
                 <div class="teste"></div>
             </div>
         </div>
